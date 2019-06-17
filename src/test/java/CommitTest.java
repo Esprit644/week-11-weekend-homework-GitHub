@@ -13,6 +13,7 @@ public class CommitTest {
 
         commit1  = new Commit(33, "Initial commit", CommitType.BUGFIX );
         commit2  = new Commit(34, "Second commit", CommitType.FEATURE );
+        commit2  = new Commit(35, "Third commit", CommitType.FEATURE );
     }
 
     @Test

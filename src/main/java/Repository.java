@@ -37,4 +37,31 @@ public class Repository {
         this.commits.add(commit);
 
     }
+
+
+
+    public String locateCommitDescriptionById( int ID) {
+        String result = null;
+        int i = 0;
+
+        for( i = 0; i < this.commits.size(); i++) {
+            if (this.commits.get(i).getCommitId() == ID) {
+                result = this.commits.get(i).getCommitDescription();
+            }
+        }
+
+        return result;
+    }
+
+    public int getCommitsByType(String type) {
+        int result = 0;
+        int i = 0;
+
+        for (i=0;i<this.commits.size();i++){
+            if(this.commits.get(i).getCommitType().toString().equals(type)){
+                result += 1;
+            }
+        }
+        return result;
+    }
 }
